@@ -64,6 +64,7 @@ public class TwitterApp extends Activity {
 				List<Tweet> listaTweets = res.getTweets();
 	 
 				Iterator<Tweet> itTweet = listaTweets.iterator();
+				listTweets.clear();
 	 
 				while (itTweet.hasNext()) {
 					Tweet tweet = itTweet.next();
