@@ -35,7 +35,7 @@
 	    	android:layout_height="wrap_content"
 	    	android:layout_alignTop="@+id/ok"
 	    	android:layout_alignBottom="@+id/ok"
-	    	android:layout_width="match_parent" ></EditText>
+	    	android:layout_width="match_parent" android:maxLines="1"></EditText>
 
 	    
 	</RelativeLayout>

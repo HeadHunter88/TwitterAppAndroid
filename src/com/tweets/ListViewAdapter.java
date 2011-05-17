@@ -1,19 +1,11 @@
 package com.tweets;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.security.KeyStore.LoadStoreParameter;
 import java.util.List;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,6 +41,12 @@ class ListViewAdapter extends BaseAdapter {
     	String entry = Tweets.get(position).getUser();
     	String urlImage = Tweets.get(position).getUrlImage();
     	String info = Tweets.get(position).getPost();
+    	if(!TwitterApp.img.containsKey(urlImage))
+    	{
+    		Drawable drawable = LoadImageFromWebOperations(urlImage);
+    		TwitterApp.img.put(urlImage, drawable);
+    	}
+    	
     	
     	if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context
@@ -61,8 +59,7 @@ class ListViewAdapter extends BaseAdapter {
     	TextView tweetInfo = (TextView) convertView.findViewById(R.id.info);
     	tweetInfo.setText(info);
     	ImageView imgViewer = (ImageView) convertView.findViewById(R.id.imgView);
-    	Drawable drawable = LoadImageFromWebOperations(urlImage);
-    	imgViewer.setImageDrawable(drawable);
+    	imgViewer.setImageDrawable(TwitterApp.img.get(urlImage));
     	
 		return convertView;
     }

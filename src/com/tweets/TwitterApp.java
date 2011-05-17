@@ -1,6 +1,9 @@
 package com.tweets;
 
 import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Enumeration;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 
@@ -13,6 +16,7 @@ import twitter4j.TwitterFactory;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -24,6 +28,9 @@ import android.widget.ListView;
 
 
 public class TwitterApp extends Activity {
+	
+	public static Hashtable<String, Drawable> img = new Hashtable<String, Drawable>();
+	
     /** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
