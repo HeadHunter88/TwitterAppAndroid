@@ -19,7 +19,7 @@
 		    android:layout_height="wrap_content"
 		    android:layout_marginRight="5dip"
 		    android:id="@+id/label"
-		    android:text="Pesquisa:"
+		    android:text="Search:"
 		    android:textSize="16dip"
 		    android:layout_marginLeft="5dip" />
 	    <Button
@@ -35,7 +35,7 @@
 	    	android:layout_height="wrap_content"
 	    	android:layout_alignTop="@+id/ok"
 	    	android:layout_alignBottom="@+id/ok"
-	    	android:layout_width="match_parent" android:maxLines="1"></EditText>
+	    	android:layout_width="match_parent" android:maxLines="1" android:inputType="textWebEditText"></EditText>
 
 	    
 	</RelativeLayout>
