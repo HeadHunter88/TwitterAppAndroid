@@ -1,0 +1,82 @@
+
+    <RelativeLayout android:id="@+id/relativeLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView
+        	android:src="@drawable/icon"
+        	android:layout_width="100dip"
+        	android:layout_height="100dip"
+        	android:layout_alignParentRight="true"
+        	android:id="@+id/imgUser"
+        	android:layout_marginTop="5dip"
+        	android:layout_marginLeft="5dip"
+        	android:layout_marginRight="5dip" />
+        <TextView
+        	android:layout_marginTop="5dip"
+        	android:layout_marginLeft="5dip"
+        	android:layout_marginRight="5dip"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="16dip"
+        	android:id="@+id/lblUser"
+        	android:text="User:"
+        	android:layout_alignParentLeft="true"
+        	android:layout_toLeftOf="@+id/imgUser" />
+        	
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" 
+        	android:id="@+id/userName"
+        	android:text="TextView"
+        	android:textSize="18dip"
+        	android:layout_below="@+id/lblUser"
+        	android:layout_alignLeft="@+id/lblUser"
+        	android:layout_alignRight="@+id/lblUser" />
+        	
+        <TextView
+        	android:layout_marginTop="20dip"
+        	android:layout_below="@+id/userName"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="16dip"
+        	android:text="Created At:"
+        	android:layout_alignLeft="@+id/userName"
+        	android:layout_alignRight="@+id/userName"
+        	android:id="@+id/lblCreated"/>
+        	
+        <TextView
+        	android:layout_below="@+id/lblCreated"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:id="@+id/date"
+        	android:text="TextView"
+        	android:textSize="18dip"
+        	android:layout_alignLeft="@+id/lblCreated"
+        	android:layout_alignRight="@+id/lblCreated" />
+        	
+        <TextView
+        	android:layout_marginTop="20dip"
+        	android:layout_below="@+id/date"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="16dip"
+        	android:text="Tweet Information:"
+        	android:layout_alignLeft="@+id/date"
+        	android:layout_alignRight="@+id/date"
+        	android:id="@+id/lblPost"/>
+        	
+        <TextView
+        	android:layout_below="@+id/lblPost"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:id="@+id/postInfo"
+        	android:textSize="18dip"
+        	android:text="TextView"
+        	android:layout_alignLeft="@+id/lblPost" />
+        	
+        <Button
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_alignParentBottom="true"
+	    	android:id="@+id/btnBack"
+	    	android:background="@drawable/ic_menu_back"/>
+        	
+    </RelativeLayout>

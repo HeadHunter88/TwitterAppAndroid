@@ -13,7 +13,6 @@ import twitter4j.Tweet;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -24,6 +23,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -47,6 +47,9 @@ public class TwitterApp extends Activity{
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.main);
 		setProgressBarIndeterminateVisibility(false);
+		
+		((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay().getRefreshRate();
+		
 		Button button = (Button) findViewById(R.id.ok);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
